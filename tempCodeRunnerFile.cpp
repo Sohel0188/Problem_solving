@@ -1,1 +1,4 @@
- // cout<<(mid-1);
+{
+                cout << mid << " " << mid + 1;
+                break;
+            }
