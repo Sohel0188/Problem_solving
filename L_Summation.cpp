@@ -1,27 +1,20 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int recursion(int ar[],int size){
-    // int i;
-    if(size==0) return 0;
-    // int result;
-    // cout<<result;
-    // result += ar[i];
-    // i++;
-    // recursion(ar,size-1);
-    // return result;
-    return ar[size - 1] + recursion(ar, size - 1);
 
+long long sumArray(vector<int>& A, int N) {
+    if (N == 0) return 0;
+    return A[N - 1] + sumArray(A, N - 1);
 }
 
-int main(){
-   int n;
-   cin>>n;
-   int ar[n];
-   for(int i=0;i<n;i++){
-    cin>>ar[i];
-   } 
-  int total = recursion(ar,n);
-  cout<<total <<endl;
+int main() {
+    int N;
+    cin >> N;
+    
+    vector<int> A(N);
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+
+    cout << sumArray(A, N) << endl;
     return 0;
 }
-
