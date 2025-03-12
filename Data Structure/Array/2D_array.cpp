@@ -13,7 +13,7 @@ int main(){
    for(int i=0;i<row;i++){
     for(int j=0;j<columb;j++){
         //cout<<"ar["<<i <<"]"<<"["<<j<<"] ";
-        cout<<ar[i]<<" "<<[j];
+        cout<<ar[i]<<" "<<ar[j];
     }
     cout<<endl;
    }
