@@ -24,7 +24,11 @@ void insert_at_tail(Node *&head, int value){
     tmp->next = newNode;
 
 };
-
+void insert_at_head(Node *&head, int value){
+    Node * newNode = new Node(value);
+    newNode->next = head;
+    head = newNode;
+};
 void print_linked_list(Node * head){
     Node * tmp = head;
     while (tmp!=NULL){
@@ -38,8 +42,10 @@ int main(){
     Node * head = NULL;
     while(true){
     cout<<"Option 1:Insert at Tail"<<endl; 
-    cout<<"Option 2:Print at linked list"<<endl; 
-    cout<<"Option 3:Tarminate"<<endl; 
+    cout<<"Option 2:Insert at Head"<<endl; 
+    // cout<<"Option 3:Insert at Any Position"<<endl; 
+    cout<<"Option 4:Print at linked list"<<endl; 
+    cout<<"Option 5:Tarminate"<<endl; 
     int opt;
     cin>>opt;
     if(opt==1){
@@ -48,8 +54,13 @@ int main(){
         cin>>val;
         insert_at_tail(head,val);
     }else if(opt==2){
+        cout<<"Please Enter Any Value"<<endl;
+        int val;
+        cin>>val;
+        insert_at_head(head,val);
+    }else if(opt==4){
         print_linked_list(head);
-    }else if(opt==3){
+    }else if(opt==5){
         break;
     }
 }
