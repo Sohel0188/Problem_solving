@@ -63,17 +63,18 @@ int main()
             while (true)
             {   int value;
                 cin >> value;
+                insert_at_tail(head, value);
                 if (value == -1)
                 {
                     break;
                 }
-                insert_at_tail(head, value);
+                
             }
         }else if(Opt==2){
             print_linked_list(head);
         }else if(Opt==3){
             int size = linked_size(head);
-            cout<<"Side of Linked List: "<<size<<endl;
+            cout<<"Size of Linked List: "<<size<<endl;
         }
         else if(Opt==4){
             break;
