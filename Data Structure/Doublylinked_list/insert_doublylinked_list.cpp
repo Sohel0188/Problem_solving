@@ -37,7 +37,7 @@ int main(){
     head->next = a;
     a->next = b;
     a->prev = head;
-    b->next = c;
+    b->next = c; 
     b->prev = a;
     c->prev = b;
     Node * tail = c;
